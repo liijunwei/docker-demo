@@ -18,3 +18,12 @@ gaa;gcmsg 'Added tmp message';gp; ssh udesk "cd /root/app && git pull"
 docker run --rm -dp 3000:3000 getting-started
 
 visit http://172.16.210.142:3000/
+
+# push
+
+create image on dockerhub
+
+docker login -u leejunwei
+docker tag getting-started leejunwei/getting-started
+docker push leejunwei/getting-started
+
