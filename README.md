@@ -12,3 +12,9 @@ git clone file:///root/app.git
 # sample workflow
 
 gaa;gcmsg 'Added tmp message';gp; ssh udesk "cd /root/app && git pull"
+
+# run
+
+docker run --rm -dp 3000:3000 getting-started
+
+visit http://172.16.210.142:3000/
