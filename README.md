@@ -1,3 +1,7 @@
+# learn
+
+http://172.16.210.142/tutorial/persisting-our-data/
+
 # on 172.16.210.142:/root/
 git init --bare app.git
 
