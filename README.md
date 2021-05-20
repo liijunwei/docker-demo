@@ -47,7 +47,7 @@ docker exec -it 38dbdf6fe340 mysql -uroot -p123456
 docker run -it --network todo-app nicolaka/netshoot
 dig mysql
 
-docker run -dp 3000:3000 \
+docker run -dp 3000:3000 --rm \
   -w /app -v "$(pwd):/app" \
   --network todo-app \
   -e MYSQL_HOST=mysql \
@@ -56,3 +56,9 @@ docker run -dp 3000:3000 \
   -e MYSQL_DB=todos \
   node:12-alpine \
   sh -c "yarn install && yarn run dev"
+
+
+docker exec -it 38dbdf6fe340 mysql -p todos
+
++ todo: 插入数据有问题
+
