@@ -48,7 +48,7 @@ docker run --rm --network todo-app --network-alias mysql --name mysql5.7.todo -p
 
 docker exec -it $(docker ps|grep mysql5.7.todo | awk '{print $1}') mysql -uroot -p123456 -Dtodos
 
-docker run -it --network todo-app nicolaka/netshoot
+docker run --rm -it --network todo-app nicolaka/netshoot
 dig mysql
 
 OK
