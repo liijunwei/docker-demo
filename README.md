@@ -1,3 +1,7 @@
+# localhost
+
+SQLITE_DB_LOCATION=/Users/lijunwei/Desktop/todo.db node src/index.js
+
 # learn
 
 http://172.16.210.142/tutorial/persisting-our-data/
