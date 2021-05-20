@@ -46,12 +46,13 @@ docker run --rm -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
 docker run --rm --network todo-app --network-alias mysql --name mysql5.7.todo -p 33061:3306 -v todo-db-mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=todos -d mysql:5.7.34
 
-docker exec -it 38dbdf6fe340 mysql -uroot -p123456
+docker exec -it $(docker ps|grep mysql5.7.todo | awk '{print $1}') mysql -uroot -p123456 -Dtodos
 
 docker run -it --network todo-app nicolaka/netshoot
 dig mysql
 
-docker run -dp 3000:3000 --rm \
+OK
+docker run --rm -dp 3000:3000 \
   -w /app -v "$(pwd):/app" \
   --network todo-app \
   -e MYSQL_HOST=mysql \
@@ -60,7 +61,6 @@ docker run -dp 3000:3000 --rm \
   -e MYSQL_DB=todos \
   node:12-alpine \
   sh -c "yarn install && yarn run dev"
-
 
 docker exec -it 38dbdf6fe340 mysql -p123456 todos
 
