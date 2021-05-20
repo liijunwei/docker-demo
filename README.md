@@ -62,7 +62,8 @@ docker run -dp 3000:3000 --rm \
   sh -c "yarn install && yarn run dev"
 
 
-docker exec -it 38dbdf6fe340 mysql -p todos
+docker exec -it 38dbdf6fe340 mysql -p123456 todos
 
-+ todo: 插入数据有问题
-
++ TODO 插入数据有问题
+    + 可能是网络问题, 过会儿就又好了
+    + 按回车键好像又会触发问题, 重启容器不好使
