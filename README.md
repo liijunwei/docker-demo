@@ -42,3 +42,8 @@ docker run --rm -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
 docker-compose version
 touch docker-compose.yml
+
+docker-compose up
+docker-compose up -d
+docker-compose logs -f
+docker-compose down
