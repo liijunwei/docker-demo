@@ -44,7 +44,13 @@ docker run --rm -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
 # network
 
-docker run --rm --network todo-app --network-alias mysql --name mysql5.7.todo -p 33061:3306 -v todo-db-mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=todos -d mysql:5.7.34
+docker run --rm -d \
+    --network todo-app --network-alias mysql \
+    --name mysql5.7.todo \
+    -v todo-db-mysql:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=123456 \
+    -e MYSQL_DATABASE=todos \
+    mysql:5.7.34
 
 docker exec -it $(docker ps|grep mysql5.7.todo | awk '{print $1}') mysql -uroot -p123456 -Dtodos
 
