@@ -38,3 +38,7 @@ docker volume inspcet id
 docker volume create todo-db
 docker run --rm -dp 3000:3000 -v todo-db:/etc/todos getting-started
 
+# docker-compose
+
+docker-compose version
+touch docker-compose.yml
