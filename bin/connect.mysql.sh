@@ -1,0 +1,1 @@
+docker exec -it $(docker ps|grep mysql5.7.todo | awk '{print $1}') mysql -uroot -p123456 -Dtodos
