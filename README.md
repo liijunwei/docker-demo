@@ -47,3 +47,9 @@ docker-compose up
 docker-compose up -d
 docker-compose logs -f
 docker-compose down
+
+
+cd /root/youtube/066/ex3
+docker-compose up --scale app=8 -d
+watch -d -n.2 "curl -s http://172.16.210.142:1313/"
+
