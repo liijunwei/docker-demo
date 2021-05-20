@@ -8,4 +8,6 @@ docker run --rm -dp 3000:3000 \
   -e MYSQL_PASSWORD=123456 \
   -e MYSQL_DB=todos \
   node:12-alpine \
-  sh -c "yarn install && yarn run dev"
+  sh -c "yarn install && yarn run dev";
+
+docker ps;

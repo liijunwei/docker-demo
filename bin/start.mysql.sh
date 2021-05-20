@@ -4,4 +4,6 @@ docker run --rm -d \
   -v todo-db-mysql:/var/lib/mysql \
   -e MYSQL_ROOT_PASSWORD=123456 \
   -e MYSQL_DATABASE=todos \
-  mysql:5.7.34
+  mysql:5.7.34;
+
+docker ps;

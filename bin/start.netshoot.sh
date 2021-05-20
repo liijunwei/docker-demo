@@ -1,1 +1,1 @@
-docker run --rm -it --network todo-app nicolaka/netshoot
+docker run --rm --name netshot -it --network todo-app nicolaka/netshoot
