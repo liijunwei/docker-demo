@@ -11,5 +11,5 @@ echo;
 echo;
 
 for i in {1..10}; do
-  curl -s http://172.16.210.142:1313/;
+  echo "第 $i 次: $(curl -s http://172.16.210.142:1313/)";
 done
