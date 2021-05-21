@@ -11,5 +11,5 @@ echo;
 echo;
 
 for i in {1..10}; do
-  echo -e "第\t $i \t次: $(curl -s http://172.16.210.142:1313/)";
+  echo -e "第$i\t次: $(curl -s http://172.16.210.142:1313/)";
 done
