@@ -7,4 +7,9 @@ echo;
 
 docker ps;
 
-watch -d -n.2 "curl -s http://172.16.210.142:1313/";
+echo;
+echo;
+
+for i in {1..10}; do
+  curl -s http://172.16.210.142:1313/;
+done
