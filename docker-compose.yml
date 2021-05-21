@@ -21,5 +21,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: todos
+  docker-getting-started-tutorial:
+    image: docker/getting-started
+    ports:
+      - 80:80
+
 volumes:
   todo-db-mysql:
