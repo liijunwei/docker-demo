@@ -1,6 +1,6 @@
 cd /root/youtube/066/ex3;
 
-docker-compose up --scale app=8 -d --remove-orphans;;
+docker-compose up --scale app=8 -d --remove-orphans;
 
 echo;
 echo;
