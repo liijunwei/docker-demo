@@ -1,6 +1,6 @@
 # localhost
 
-SQLITE_DB_LOCATION=/Users/lijunwei/Desktop/todo.db node src/index.js
+SQLITE_DB_LOCATION=$HOME/Desktop/todo.db node src/index.js
 
 # GO read bin/\*.sh
 
